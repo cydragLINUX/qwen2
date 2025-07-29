@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatBot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Qwen ChatBot</h1>
+    <form method="post">
+        <textarea name="user_input" placeholder="Savolingizni yozing..."></textarea><br>
+        <button type="submit">Yuborish</button>
+    </form>
+    {% if response %}
+    <div class="response"><strong>Javob:</strong> {{ response }}</div>
+    {% endif %}
+</body>
+</html>
